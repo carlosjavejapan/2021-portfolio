@@ -39,6 +39,13 @@ $(function() {
 
         //now.height(videoHeight);
 
+        if (mediaPC.matches) {
+            ImageDivHeight();
+            $(window).resize(function() {
+                ImageDivHeight();
+            });
+        }
+
         function ImageDivHeight() {
             let now2 = now.not('.dental, .auone'),
                 imagesDiv = now2.find('.images'),
@@ -46,10 +53,7 @@ $(function() {
             imagesDiv.height(videoHeight);
         }
 
-        ImageDivHeight();
-        $(window).resize(function() {
-            ImageDivHeight();
-        });
+
 
         // if ($(window).innerWidth() > 991) {
         //     $(".dock").height(videoHeight);
