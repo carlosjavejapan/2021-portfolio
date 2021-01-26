@@ -579,6 +579,7 @@ section h2 {
     font-family: 'Montserrat', sans-serif;
     color: rgb(248, 132, 64);
     line-height: 1;
+    z-index: 3;
 }
 
 section h2 i {
@@ -604,6 +605,7 @@ section#work h2 i {
 
 .sect02>div.skill {
     width: 100%;
+    box-sizing: border-box;
 }
 
 .skill {
@@ -637,6 +639,7 @@ section#work h2 i {
     background-size: 180%;
     background-blend-mode: overlay;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
 }
 
 .skill>ul>li.frontEnd ul {
@@ -1028,7 +1031,7 @@ section#work {
     transform: rotate(-14.6deg);
     transform-origin: bottom left;
     z-index: 1;
-    background-image: url(../img/carlosleona.png);
+    background-image: url(../img/carlos_leona.jpg);
     background-repeat: no-repeat;
     background-size: 72%;
     background-blend-mode: multiply;
@@ -1463,7 +1466,7 @@ footer p::after {
         transform: rotate( 347deg);
         transform-origin: left;
         background-size: 133%;
-        background-position: 27% 0%;
+        background-position: 42% 0%;
     }
     .list__contactme>ul>li.right p.line__qr {
         right: 10%;
@@ -1536,7 +1539,6 @@ footer p::after {
     .animate_for_nav {
         right: 0px;
     }
-    .animate_for_nav {}
     .animate_for_menuIcon {
         right: 44%;
     }
@@ -1570,11 +1572,11 @@ footer p::after {
     .sect02>div {
         width: auto;
     }
-    .skill {
+    /* .skill {
         text-align: left;
         width: auto;
         padding: 0 10px;
-    }
+    } */
     .sect02 h2 {
         display: block;
         position: relative;

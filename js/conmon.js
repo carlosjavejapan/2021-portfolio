@@ -53,13 +53,6 @@ $(function() {
             imagesDiv.height(videoHeight);
         }
 
-
-
-        // if ($(window).innerWidth() > 991) {
-        //     $(".dock").height(videoHeight);
-        //     now.height(imgHeight);
-        // }
-
         // hover left block
         left.hover(function() {
             forLeft.addClass("activeHover");
