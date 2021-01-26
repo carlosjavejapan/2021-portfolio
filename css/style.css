@@ -634,10 +634,10 @@ section#work h2 i {
     font-family: 'Montserrat';
     font-weight: 400;
     text-align: center;
-    background-color: #2f2f2f;
+    background-color: #242424;
     background-position: center;
     background-size: 180%;
-    background-blend-mode: overlay;
+    background-blend-mode: soft-light;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
 }
