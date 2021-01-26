@@ -316,3 +316,8 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+window.onload = function() {
+    var element = document.getElementsByTagName('video');
+    element.muted = "muted";
+}
