@@ -632,7 +632,7 @@ section#work h2 i {
 
 .skill>ul>li>ul {
     height: 100%;
-    padding: 50px 10px;
+    padding: 50px 0;
     color: #fff;
     font-family: 'Montserrat';
     font-weight: 400;
@@ -794,6 +794,7 @@ section#work {
 #container ul li.dock .images>div {
     width: 100%;
     position: absolute;
+    z-index: 1;
 }
 
 #container ul li.dock .left {
@@ -855,6 +856,7 @@ section#work {
 #container ul li.flex2 .images>div {
     width: 100%;
     position: absolute;
+    z-index: 1;
 }
 
 #container ul li.diamond .images .left,
@@ -1051,6 +1053,7 @@ section#work {
 .list__contactme>ul {
     padding: 100px 0;
     height: 60vh;
+    text-align: center;
 }
 
 .list__contactme>ul>li {
