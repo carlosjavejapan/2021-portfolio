@@ -770,8 +770,9 @@ section#work {
     font-family: monospace;
     text-align: center;
     font-family: Hiragino Maru Gothic ProN;
-    background: #1b1b1b;
-    color: #fff;
+    background: #1a252f;
+    color: #b1b1b1;
+    border-radius: 5px;
 }
 
 #container ul li .summary h3 small {
