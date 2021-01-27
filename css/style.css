@@ -688,7 +688,6 @@ section#work h2 i {
 
 .skill>ul>li>h3 small {
     display: inline;
-    font-family: 'Sawarabi Mincho', sans-serif;
     font-family: Hiragino Maru Gothic ProN;
     font-size: 14px;
 }
@@ -700,7 +699,6 @@ section#work h2 i {
 .presentacion p {
     position: relative;
     font-size: 14px;
-    font-family: 'Sawarabi Mincho', sans-serif;
     font-family: Hiragino Maru Gothic ProN;
     font-weight: 100;
     color: rgb(44, 44, 44);
@@ -912,7 +910,6 @@ section#work {
     width: auto;
     padding: 10px;
     font-size: 12px;
-    font-family: 'Sawarabi Mincho', sans-serif;
     font-family: Hiragino Maru Gothic ProN;
     font-weight: 100;
 }
@@ -1013,10 +1010,6 @@ section#work {
 }
 
 .list__contactme>ul>li.right p {
-    font-family: Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
-}
-
-.list__contactme>ul>li.right p {
     margin-bottom: 40px;
 }
 
@@ -1047,7 +1040,7 @@ section#work {
 .list__contactme>ul>li.right p.line__link a small {
     display: inline-block;
     font-size: 18px;
-    font-family: 'Sawarabi Mincho', sans-serif;
+    font-family: Hiragino Maru Gothic ProN;
 }
 
 .list__contactme>ul>li.right p a:hover {
@@ -1072,282 +1065,6 @@ section#work {
 
 ::-webkit-search-cancel-button {
     display: none;
-}
-
-.btn__box {
-    position: relative;
-    width: 200px;
-    height: 100px;
-    line-height: 100px;
-    overflow: hidden;
-    margin: 0 auto;
-}
-
-.btn__box a {
-    display: block;
-}
-
-
-/* 線(ボーダー)のスタイル 共通 */
-
-.btn__box:before,
-.btn__box:after,
-.btn__box a:before,
-.btn__box a:after {
-    content: '';
-    position: absolute;
-    background: #000;
-    /*線の色*/
-}
-
-
-/* 下のボーダー */
-
-.btn__box:before {
-    bottom: 0;
-    left: -200px;
-    width: 200px;
-    height: 1px;
-}
-
-
-/* 右のボーダー */
-
-.btn__box:after {
-    bottom: -100px;
-    right: 0;
-    width: 1px;
-    height: 100px;
-}
-
-
-/* 上のボーダー */
-
-.btn__box a:before {
-    top: 0;
-    right: -200px;
-    width: 200px;
-    height: 1px;
-}
-
-
-/* 左のボーダー */
-
-.btn__box a:after {
-    top: -100px;
-    left: 0;
-    width: 1px;
-    height: 100px;
-}
-
-
-/* ホバー時のアニメーション指定 */
-
-.btn__box:hover:before {
-    animation: leftAnim .5s linear 0s;
-}
-
-.btn__box:hover:after {
-    animation: bottomAnim .5s linear .3s;
-}
-
-.btn__box a:hover:before {
-    animation: rightAnim .5s linear 0s;
-}
-
-.btn__box a:hover:after {
-    animation: topAnim .5s linear .3s;
-}
-
-
-/* 各アニメーション */
-
-@keyframes topAnim {
-    0% {
-        top: -100px;
-    }
-    100% {
-        top: 100px;
-    }
-}
-
-@keyframes bottomAnim {
-    0% {
-        bottom: -100px;
-    }
-    100% {
-        bottom: 100px;
-    }
-}
-
-@keyframes rightAnim {
-    0% {
-        right: -200px;
-    }
-    100% {
-        right: 200px;
-    }
-}
-
-@keyframes leftAnim {
-    0% {
-        left: -200px;
-    }
-    100% {
-        left: 200px;
-    }
-}
-
-.sliphoveritem h4 {
-    font-family: sans-serif;
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
-}
-
-.sliphoveritem p {
-    text-align: center;
-    font-family: sans-serif;
-    font-weight: 100;
-    font-size: 12px;
-}
-
-
-/* hover circle animation */
-
-.sliphoveritem a.link,
-.sliphoveritem a.modal {
-    display: inline-block;
-    position: relative;
-    width: 50px;
-    height: 50px;
-    border: 2px solid transparent;
-    border-radius: 100%;
-    text-indent: -999999px;
-    background-repeat: no-repeat !important;
-    background-position: center center !important;
-    background-size: 60% !important;
-    margin: 0 2%;
-    margin-top: 30px;
-    outline: none;
-}
-
-.sliphoveritem a.link:before,
-.sliphoveritem a.modal:before {
-    border: 2px solid transparent;
-}
-
-.sliphoveritem a.link::before,
-.sliphoveritem a.link::after,
-.sliphoveritem a.modal::before,
-.sliphoveritem a.modal::after {
-    box-sizing: border-box;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    border-radius: 100%;
-    -webkit-transition: all 0.8s ease;
-    -moz-transition: all 0.8s ease;
-    -ms-transition: all 0.8s ease;
-    -o-transition: all 0.8s ease;
-    transition: all 0.8s ease;
-}
-
-.sliphoveritem a.link:after,
-.sliphoveritem a.modal:after {
-    border: 0 solid transparent;
-}
-
-.sliphoveritem a.link:hover:before,
-.sliphoveritem a.modal:hover:before {
-    border-top-color: #fff;
-    border-right-color: #fff;
-    border-bottom-color: #fff;
-    -webkit-transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.1s, border-bottom-color 0.15s linear 0.2s;
-    transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.1s, border-bottom-color 0.15s linear 0.2s;
-}
-
-.sliphoveritem a.link:hover:after,
-.sliphoveritem a.modal:hover:after {
-    border-top: 2px solid #fff;
-    border-left-width: 2px;
-    border-right-width: 2px;
-    -webkit-transform: rotate(270deg);
-    transform: rotate(270deg);
-    -webkit-transition: border-left-width 0s linear 0.35s, -webkit-transform 0.4s linear 0s;
-    transition: border-left-width 0s linear 0.35s, -webkit-transform 0.4s linear 0s;
-    transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s;
-    transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s, -webkit-transform 0.4s linear 0s;
-}
-
-
-/* slider */
-
-#slider img,
-#slider1 img {
-    /*position: absolute;*/
-    display: none;
-    -webkit-transition: all 2s;
-    -moz-transition: all 2s;
-    -ms-transition: all 2s;
-    -o-transition: all 2s;
-    transition: all 2s;
-}
-
-#slider img:nth-child(1),
-#slider1 img:nth-child(1) {
-    display: block;
-}
-
-
-/* overlay at start */
-
-.mfp-fade.mfp-bg {
-    opacity: 0;
-    -webkit-transition: all 0.9s ease-out;
-    -moz-transition: all 0.9s ease-out;
-    transition: all 0.9s ease-out;
-}
-
-
-/* overlay animate in */
-
-.mfp-fade.mfp-bg.mfp-ready {
-    opacity: 0.8;
-}
-
-
-/* overlay animate out */
-
-.mfp-fade.mfp-bg.mfp-removing {
-    opacity: 0;
-}
-
-
-/* content at start */
-
-.mfp-fade.mfp-wrap .mfp-content {
-    opacity: 0;
-    -webkit-transition: all 0.9s ease-out;
-    -moz-transition: all 0.9s ease-out;
-    transition: all 0.9s ease-out;
-}
-
-
-/* content animate it */
-
-.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
-    opacity: 1;
-}
-
-
-/* content animate out */
-
-.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
-    opacity: 0;
 }
 
 footer {
@@ -1553,8 +1270,6 @@ footer p::after {
         margin: 10px 0 15px;
         display: inline-block;
         vertical-align: text-bottom;
-        font-family: 'Lato';
-        font-weight: 400;
     }
     .skill>ul>li+li {
         margin-left: 0px;
