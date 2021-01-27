@@ -151,7 +151,7 @@ function setHeight() {
     // $('.sect02').css('min-height', windowHeight);
     // $('.sect03').css('min-height', windowHeight);
     // $('.sect04').css('min-height', windowHeight);
-    $('.sect05').css('min-height', windowHeight + 1);
+    // $('.sect05').css('min-height', windowHeight + 1);
 };
 setHeight();
 $(window).resize(function() {
