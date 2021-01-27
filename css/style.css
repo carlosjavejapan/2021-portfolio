@@ -592,6 +592,7 @@ section h2 i {
     background-color: #1a252f;
     color: #fa7f51;
     clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
+    -webkit-clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
     font-weight: 200;
 }
 
@@ -800,21 +801,25 @@ section#work {
 
 #container ul li.dock .left {
     clip-path: polygon(0% 0%, 75% 0%, 25% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0% 0%, 75% 0%, 25% 100%, 0% 100%);
 }
 
 #container ul li.dock .right {
     clip-path: polygon(0% 152%, 100% -48%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0% 152%, 100% -48%, 100% 100%, 0% 100%);
 }
 
 #container ul li.dock .images .left:hover,
 #container ul li.dock .images .left.activeHover {
     clip-path: polygon(0% 0%, 135% 0%, 70% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0% 0%, 135% 0%, 70% 100%, 0% 100%);
     z-index: 10;
 }
 
 #container ul li.dock .images .right:hover,
 #container ul li.dock .images .right.activeHover {
     clip-path: polygon(0% 46%, 100% -107%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0% 46%, 100% -107%, 100% 100%, 0% 100%);
     z-index: 10;
 }
 
@@ -865,17 +870,20 @@ section#work {
 #container ul li.diamond .images .left,
 #container ul li.flex2 .images .left {
     clip-path: polygon(0% 0%, 40% 0%, 15% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0% 0%, 40% 0%, 15% 100%, 0% 100%);
     z-index: 1;
 }
 
 #container ul li.diamond .images .center,
 #container ul li.flex2 .images .center {
     clip-path: polygon(41% 0%, 59% 0%, 84% 100%, 16% 100%);
+    -webkit-clip-path: polygon(41% 0%, 59% 0%, 84% 100%, 16% 100%);
 }
 
 #container ul li.diamond .images .right,
 #container ul li.flex2 .images .right {
     clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 85% 100%);
+    -webkit-clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 85% 100%);
 }
 
 #container ul li.diamond .images .left img {
@@ -893,6 +901,7 @@ section#work {
 #container ul li.flex2 .images .left:hover,
 #container ul li.flex2 .images .left.activeHover {
     clip-path: polygon(0% 0%, 135% 0%, 70% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0% 0%, 135% 0%, 70% 100%, 0% 100%);
     z-index: 2;
 }
 
@@ -901,6 +910,7 @@ section#work {
 #container ul li.flex2 .images .center:hover,
 #container ul li.flex2 .images .center.activeHover {
     clip-path: polygon(-30% 0%, 130% 0%, 84% 100%, 16% 100%);
+    -webkit-clip-path: polygon(-30% 0%, 130% 0%, 84% 100%, 16% 100%);
     z-index: 2;
 }
 
@@ -909,6 +919,7 @@ section#work {
 #container ul li.flex2 .images .right:hover,
 #container ul li.flex2 .images .right.activeHover {
     clip-path: polygon(-60% 0%, 100% 0%, 100% 100%, 30% 100%);
+    -webkit-clip-path: polygon(-60% 0%, 100% 0%, 100% 100%, 30% 100%);
     z-index: 2;
 }
 
@@ -929,10 +940,12 @@ section#work {
 
 #container ul li.flex1 .left {
     clip-path: polygon(0% 0%, 75% 0%, 25% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0% 0%, 75% 0%, 25% 100%, 0% 100%);
 }
 
 #container ul li.flex1 .right {
     clip-path: polygon(0% 152%, 100% -48%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0% 152%, 100% -48%, 100% 100%, 0% 100%);
 }
 
 #container ul li.flex1 .images .left img {
@@ -948,12 +961,14 @@ section#work {
 #container ul li.flex1 .images .left:hover,
 #container ul li.flex1 .images .left.activeHover {
     clip-path: polygon(0% 0%, 135% 0%, 70% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0% 0%, 135% 0%, 70% 100%, 0% 100%);
     z-index: 2;
 }
 
 #container ul li.flex1 .images .right:hover,
 #container ul li.flex1 .images .right.activeHover {
     clip-path: polygon(0% 46%, 100% -107%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0% 46%, 100% -107%, 100% 100%, 0% 100%);
     z-index: 2;
 }
 
@@ -1664,6 +1679,7 @@ footer p::after {
         margin: 20px auto;
         position: relative;
         clip-path: none !important;
+        -webkit-clip-path: none !important;
         box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
     }
     #container ul li>div+div {
@@ -1699,6 +1715,7 @@ footer p::after {
     #container ul li.flex2 .images>div {
         position: relative;
         clip-path: none !important;
+        -webkit-clip-path: none !important;
     }
     #container ul li.diamond .images div img,
     #container ul li.flex1 .images div img {
