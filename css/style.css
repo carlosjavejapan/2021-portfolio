@@ -795,6 +795,7 @@ section#work {
     width: 100%;
     position: absolute;
     z-index: 1;
+    -webkit-transform: translate3d(0, 0, 0);
 }
 
 #container ul li.dock .left {
@@ -808,13 +809,13 @@ section#work {
 #container ul li.dock .images .left:hover,
 #container ul li.dock .images .left.activeHover {
     clip-path: polygon(0% 0%, 135% 0%, 70% 100%, 0% 100%);
-    z-index: 2;
+    z-index: 10;
 }
 
 #container ul li.dock .images .right:hover,
 #container ul li.dock .images .right.activeHover {
     clip-path: polygon(0% 46%, 100% -107%, 100% 100%, 0% 100%);
-    z-index: 2;
+    z-index: 10;
 }
 
 #container ul li.dental .images {
