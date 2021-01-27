@@ -7,7 +7,10 @@ body {
     height: 100vh;
 }
 
-body {}
+body {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
 
 main {
     overflow: hidden;
@@ -365,7 +368,7 @@ main {
     right: -250px;
     width: 250px;
     height: 400px;
-    z-index: 9;
+    z-index: 99;
     background: linear-gradient(45deg, #e74d3cd0, #f1c40fb7, #1abc9c80, #3498dbd0, #9b59b6, #e74c3c80);
     animation: gradient 25s ease infinite;
     background-size: 500% 500%;
@@ -1517,7 +1520,7 @@ footer p::after {
         right: 20px;
         padding: 2px;
         color: #fff;
-        z-index: 99;
+        z-index: 100;
         letter-spacing: 6px;
         font-size: 30px;
         font-weight: bolder;
