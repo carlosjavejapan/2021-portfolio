@@ -646,6 +646,11 @@ section#work h2 i {
     border-radius: 10px;
 }
 
+.skill>ul>li:last-child>ul {
+    font-family: 'Montserrat';
+    font-family: Hiragino Maru Gothic ProN;
+}
+
 .skill>ul>li.frontEnd ul {
     background-image: url(../img/skillBG/code1.jpg);
 }
@@ -684,6 +689,7 @@ section#work h2 i {
 .skill>ul>li>h3 small {
     display: inline;
     font-family: 'Sawarabi Mincho', sans-serif;
+    font-family: Hiragino Maru Gothic ProN;
     font-size: 14px;
 }
 
@@ -695,6 +701,7 @@ section#work h2 i {
     position: relative;
     font-size: 14px;
     font-family: 'Sawarabi Mincho', sans-serif;
+    font-family: Hiragino Maru Gothic ProN;
     font-weight: 100;
     color: rgb(44, 44, 44);
     line-height: 1.5;
@@ -729,7 +736,6 @@ section#work {
     min-height: 100%;
     height: auto;
     padding: 5% 2%;
-    margin: 0 5%;
     z-index: 1;
     margin: 150px auto;
     align-items: center;
@@ -754,26 +760,30 @@ section#work {
 
 #container ul li .summary {
     flex-basis: 40%;
-    /* padding: 50px; */
     border-radius: 10px;
 }
 
 #container ul li .summary h3 {
-    font-size: 14px;
+    padding: 10px;
+    margin-bottom: 50px;
+    font-size: 18px;
     font-family: monospace;
     text-align: center;
-    margin-bottom: 50px;
+    font-family: Hiragino Maru Gothic ProN;
+    background: #1b1b1b;
+    color: #fff;
+}
+
+#container ul li .summary h3 small {
+    font-size: 11px;
+    display: block;
+    text-align: justify;
 }
 
 #container ul li .summary>div {
     padding: 20px 10px;
     border-top: 1px solid #ddd;
 }
-
-
-/* #container ul li .summary>div+div {
-    margin-top: 30px;
-} */
 
 #container ul li .summary div.activeHover,
 #container ul li .summary div.activeHover,
@@ -792,35 +802,46 @@ section#work {
     box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
 }
 
-#container ul li.dock .images>div {
+#container ul li.dock .images>div,
+#container ul li.flex2 .images>div,
+#container ul li.flex1 .images>div,
+#container ul li.diamond .images>div {
     width: 100%;
     position: absolute;
-    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
     -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
 }
 
-#container ul li.dock .left {
+#container ul li.dock .images .left,
+#container ul li.flex1 .images .left {
     clip-path: polygon(0% 0%, 75% 0%, 25% 100%, 0% 100%);
     -webkit-clip-path: polygon(0% 0%, 75% 0%, 25% 100%, 0% 100%);
 }
 
-#container ul li.dock .right {
+#container ul li.dock .images .right,
+#container ul li.flex1 .images .right {
     clip-path: polygon(0% 152%, 100% -48%, 100% 100%, 0% 100%);
     -webkit-clip-path: polygon(0% 152%, 100% -48%, 100% 100%, 0% 100%);
 }
 
 #container ul li.dock .images .left:hover,
-#container ul li.dock .images .left.activeHover {
+#container ul li.dock .images .left.activeHover,
+#container ul li.flex1 .images .left:hover,
+#container ul li.flex1 .images .left.activeHover {
     clip-path: polygon(0% 0%, 135% 0%, 70% 100%, 0% 100%);
     -webkit-clip-path: polygon(0% 0%, 135% 0%, 70% 100%, 0% 100%);
-    z-index: 10;
+    z-index: 2;
 }
 
 #container ul li.dock .images .right:hover,
-#container ul li.dock .images .right.activeHover {
+#container ul li.dock .images .right.activeHover,
+#container ul li.flex1 .images .right:hover,
+#container ul li.flex1 .images .right.activeHover {
     clip-path: polygon(0% 46%, 100% -107%, 100% 100%, 0% 100%);
     -webkit-clip-path: polygon(0% 46%, 100% -107%, 100% 100%, 0% 100%);
-    z-index: 10;
+    z-index: 2;
 }
 
 #container ul li.dental .images {
@@ -834,152 +855,56 @@ section#work {
     box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
 }
 
-
-/* #container ul li.dental .images .left {
-    top: 0;
-    left: 0;
-}
-
-#container ul li.dental .images .center {
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-
-#container ul li.dental .images .right {
-    top: 0;
-    right: 0;
-} */
-
 #container ul li.auone .images .center {
     width: 30%;
     margin: auto;
     box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
 }
 
-#container ul li.diamond .images>div,
-#container ul li.flex2 .images>div {
-    width: 100%;
-    position: absolute;
-    z-index: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-}
-
-#container ul li.diamond .images .left,
-#container ul li.flex2 .images .left {
+#container ul li.flex2 .images .left,
+#container ul li.diamond .images .left {
     clip-path: polygon(0% 0%, 40% 0%, 15% 100%, 0% 100%);
     -webkit-clip-path: polygon(0% 0%, 40% 0%, 15% 100%, 0% 100%);
     z-index: 1;
 }
 
-#container ul li.diamond .images .center,
-#container ul li.flex2 .images .center {
+#container ul li.flex2 .images .center,
+#container ul li.diamond .images .center {
     clip-path: polygon(41% 0%, 59% 0%, 84% 100%, 16% 100%);
     -webkit-clip-path: polygon(41% 0%, 59% 0%, 84% 100%, 16% 100%);
 }
 
-#container ul li.diamond .images .right,
-#container ul li.flex2 .images .right {
+#container ul li.flex2 .images .right,
+#container ul li.diamond .images .right {
     clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 85% 100%);
     -webkit-clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 85% 100%);
 }
 
-#container ul li.diamond .images .left img {
-    position: relative;
-    left: -40%;
-}
-
-#container ul li.diamond .images .right img {
-    position: relative;
-    right: -30%;
-}
-
-#container ul li.diamond .images .left:hover,
-#container ul li.diamond .images .left.activeHover,
 #container ul li.flex2 .images .left:hover,
-#container ul li.flex2 .images .left.activeHover {
+#container ul li.flex2 .images .left.activeHover,
+#container ul li.diamond .images .left:hover,
+#container ul li.diamond .images .left.activeHover {
     clip-path: polygon(0% 0%, 135% 0%, 70% 100%, 0% 100%);
     -webkit-clip-path: polygon(0% 0%, 135% 0%, 70% 100%, 0% 100%);
     z-index: 2;
 }
 
-#container ul li.diamond .images .center:hover,
-#container ul li.diamond .images .center.activeHover,
 #container ul li.flex2 .images .center:hover,
-#container ul li.flex2 .images .center.activeHover {
+#container ul li.flex2 .images .center.activeHover,
+#container ul li.diamond .images .center:hover,
+#container ul li.diamond .images .center.activeHover {
     clip-path: polygon(-30% 0%, 130% 0%, 84% 100%, 16% 100%);
     -webkit-clip-path: polygon(-30% 0%, 130% 0%, 84% 100%, 16% 100%);
     z-index: 2;
 }
 
-#container ul li.diamond .images .right:hover,
-#container ul li.diamond .images .right.activeHover,
 #container ul li.flex2 .images .right:hover,
-#container ul li.flex2 .images .right.activeHover {
+#container ul li.flex2 .images .right.activeHover,
+#container ul li.diamond .images .right:hover,
+#container ul li.diamond .images .right.activeHover {
     clip-path: polygon(-60% 0%, 100% 0%, 100% 100%, 30% 100%);
     -webkit-clip-path: polygon(-60% 0%, 100% 0%, 100% 100%, 30% 100%);
     z-index: 2;
-}
-
-#container ul li.diamond .images .left.activeHover img,
-#container ul li.diamond .images .left:hover img {
-    left: 0;
-}
-
-#container ul li.diamond .images .right.activeHover img,
-#container ul li.diamond .images .right:hover img {
-    right: 0;
-}
-
-#container ul li.flex1 .images>div {
-    width: 100%;
-    position: absolute;
-}
-
-#container ul li.flex1 .left {
-    clip-path: polygon(0% 0%, 75% 0%, 25% 100%, 0% 100%);
-    -webkit-clip-path: polygon(0% 0%, 75% 0%, 25% 100%, 0% 100%);
-}
-
-#container ul li.flex1 .right {
-    clip-path: polygon(0% 152%, 100% -48%, 100% 100%, 0% 100%);
-    -webkit-clip-path: polygon(0% 152%, 100% -48%, 100% 100%, 0% 100%);
-}
-
-#container ul li.flex1 .images .left img {
-    position: relative;
-    left: -10%;
-}
-
-#container ul li.flex1 .images .right img {
-    position: relative;
-    right: -20%;
-}
-
-#container ul li.flex1 .images .left:hover,
-#container ul li.flex1 .images .left.activeHover {
-    clip-path: polygon(0% 0%, 135% 0%, 70% 100%, 0% 100%);
-    -webkit-clip-path: polygon(0% 0%, 135% 0%, 70% 100%, 0% 100%);
-    z-index: 2;
-}
-
-#container ul li.flex1 .images .right:hover,
-#container ul li.flex1 .images .right.activeHover {
-    clip-path: polygon(0% 46%, 100% -107%, 100% 100%, 0% 100%);
-    -webkit-clip-path: polygon(0% 46%, 100% -107%, 100% 100%, 0% 100%);
-    z-index: 2;
-}
-
-#container ul li.flex1 .images .left.activeHover img,
-#container ul li.flex1 .images .left:hover img {
-    left: 0;
-}
-
-#container ul li.flex1 .images .right.activeHover img,
-#container ul li.flex1 .images .right:hover img {
-    right: 0;
 }
 
 #container ul li p {
@@ -987,6 +912,7 @@ section#work {
     padding: 10px;
     font-size: 12px;
     font-family: 'Sawarabi Mincho', sans-serif;
+    font-family: Hiragino Maru Gothic ProN;
     font-weight: 100;
 }
 
@@ -1436,21 +1362,21 @@ footer {
 }
 
 footer p::before {
-    background-color: #fa7f51;
+    background-color: transparent;
     content: '';
     display: block;
     height: 1px;
-    margin: 0 auto 40px;
+    margin: 0 auto 20px;
     position: relative;
     width: 50px;
 }
 
 footer p::after {
-    background-color: #fa7f51;
+    background-color: #ffffff;
     content: '';
     display: block;
     height: 1px;
-    margin: 40px auto 0px;
+    margin: 20px auto 0px;
     position: relative;
     width: 50px;
 }
