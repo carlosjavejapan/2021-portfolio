@@ -9,7 +9,7 @@ body {
 
 body {
     overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: auto;
 }
 
 main {
@@ -857,6 +857,8 @@ section#work {
     width: 100%;
     position: absolute;
     z-index: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
 
 #container ul li.diamond .images .left,
