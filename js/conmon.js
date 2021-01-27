@@ -228,6 +228,44 @@ $(function() {
         return false;
     });
 
+    navItem.on('click', function(e) {
+        e.preventDefault();
+        let href = $(this).attr("href"),
+            offsetTop = href === "#" ? 0 : $(href).offset().top + 1;
+        //var offsetTop2 = href === "#" ? 0 : $(href).offset().top + 1;
+        $('html, body').stop().animate({
+            scrollTop: offsetTop
+        }, 800);
+
+        // if ($(window).innerWidth() > 991) {
+        //     $('html, body').stop().animate({
+        //         scrollTop: offsetTop
+        //     }, 800);
+        // } else {
+        //     $('html, body').stop().animate({
+        //         scrollTop: offsetTop2
+        //     }, 800, function () {
+        //         $('.nav').addClass('animate_for_nav2');
+        //         $('.nav').removeClass('animate_for_nav');
+        //         $('.nav').nextAll().removeClass('bur');
+        //         $('.openMenu').addClass('animate_for_menuIcon2');
+        //         $('.openMenu').removeClass('animate_for_menuIcon');
+        //         $('.nav').removeClass('animate_for_nav2');
+        //         $('#nav-icon1').removeClass('open');
+        //         $('.openMenu').removeClass('animate_for_menuIcon2')
+        //     });
+        // }
+
+
+    });
+
+
+
+
+
+
+
+
     // Detectar la pocicion de las sectiones y activar Nav Items list
     $window.on('scroll', function() {
         let scrollDistance = $window.scrollTop();
