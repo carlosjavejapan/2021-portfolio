@@ -1,7 +1,3 @@
-/* html {
-    scroll-behavior: smooth;
-} */
-
 .html,
 body {
     height: 100vh;
@@ -19,17 +15,12 @@ main {
 
 /* canvas style */
 
-#particles-js,
-#particles-js2 {
+#particles-js {
     position: absolute;
     top: 0;
     width: 100%;
     height: 100vh;
     background: #1a252f;
-}
-
-#particles-js2 {
-    height: 100%;
 }
 
 .particles-js-canvas-el {
@@ -102,7 +93,6 @@ main {
 
 #J {
     display: block;
-    /* fill: #aa7f3d; */
     stroke: #626463;
     stroke-miterlimit: 5;
     animation-delay: .5s, 1.5s, 1.5s;
@@ -268,6 +258,39 @@ main {
     }
 }
 
+@-webkit-keyframes DrawLine {
+    to {
+        stroke-dashOffset: 0;
+    }
+}
+
+@-webkit-keyframes ShowStroke {
+    to {
+        stroke-opacity: 1;
+    }
+}
+
+@-webkit-keyframes FadeStroke {
+    to {
+        stroke-opacity: 0;
+    }
+}
+
+@-webkit-keyframes StrokeWidth {
+    to {
+        stroke-width: 1.8;
+    }
+}
+
+@-webkit-keyframes FillIn {
+    from {
+        fill-opacity: 0;
+    }
+    to {
+        fill-opacity: 1;
+    }
+}
+
 .for_sp {
     display: none;
 }
@@ -385,6 +408,18 @@ main {
     }
 }
 
+@-webkit-keyframes gradient {
+    0% {
+        background-position: 0% 100%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
 .nav .logo {
     display: none;
     width: 40px;
@@ -398,8 +433,6 @@ main {
     display: block;
     width: 100%;
     height: 100%;
-    /* background-image: url(../img/svg/logoforNav.svg); */
-    background-size: 100%;
     border-radius: 50px;
     -webkit-mask-image: url(../img/svg/logoforNav.svg);
     mask-image: url(../img/svg/logoforNav.svg);
@@ -415,6 +448,7 @@ main {
 @-webkit-keyframes rotateY {
     to {
         -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
     }
 }
 
@@ -500,10 +534,6 @@ main {
     transition: .3s all ease-out;
 }
 
-.nav ul li.active a {
-    /* padding-left: 30px; */
-}
-
 .nav ul li.active a:after {
     background-color: #fff;
     position: absolute;
@@ -513,12 +543,6 @@ main {
     -moz-transition: .3s all ease-out;
     transition: .3s all ease-out;
 }
-
-
-/* .nav ul li.active a:hover:after {
-    left: -35px;
-    width: 30px;
-} */
 
 
 /*parte de logo*/
@@ -659,20 +683,36 @@ section#work h2 i {
     font-family: Hiragino Maru Gothic ProN;
 }
 
-.skill>ul>li.frontEnd ul {
+.no-webp .skill>ul>li.frontEnd ul {
     background-image: url(../img/skillBG/code1.jpg);
 }
 
-.skill>ul>li.design ul {
+.no-webp .skill>ul>li.design ul {
     background-image: url(../img/skillBG/design1.png);
 }
 
-.skill>ul>li.others ul {
+.no-webp .skill>ul>li.others ul {
     background-image: url(../img/skillBG/tool1.jpg);
 }
 
-.skill>ul>li.challenge ul {
+.no-webp .skill>ul>li.challenge ul {
     background-image: url(../img/skillBG/challenge1.jpg);
+}
+
+.webp .skill>ul>li.frontEnd ul {
+    background-image: url(../img/skillBG/code1.webp);
+}
+
+.webp .skill>ul>li.design ul {
+    background-image: url(../img/skillBG/design1.webp);
+}
+
+.webp .skill>ul>li.others ul {
+    background-image: url(../img/skillBG/tool2.webp);
+}
+
+.webp .skill>ul>li.challenge ul {
+    background-image: url(../img/skillBG/challenge1.webp);
 }
 
 .skill>ul>li ul:hover {
@@ -680,11 +720,6 @@ section#work h2 i {
     background-size: 200%;
     box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
 }
-
-
-/* .skill>ul>li+li {
-    margin-left: 20px;
-} */
 
 .skill>ul>li>h3 {
     font-size: 24px;
@@ -739,7 +774,6 @@ section#work {
 #container ul li {
     display: flex;
     width: 90%;
-    /* min-height: 100%; */
     height: auto;
     padding: 5% 2%;
     z-index: 1;
@@ -758,7 +792,6 @@ section#work {
 #container ul li .images {
     position: relative;
     width: 60%;
-    /* height: 100%; */
     flex-basis: 100%;
     align-self: center;
     text-align: center;
@@ -773,7 +806,6 @@ section#work {
     padding: 10px;
     margin-bottom: 50px;
     font-size: 18px;
-    font-family: monospace;
     text-align: center;
     font-family: Hiragino Maru Gothic ProN;
     background: #1a252f;
@@ -795,7 +827,6 @@ section#work {
 #container ul li .summary>p.warning {
     text-align: right;
     font-size: 10px;
-    color: rgb(121, 121, 121);
 }
 
 #container ul li .summary div.activeHover,
@@ -833,8 +864,8 @@ section#work {
 #container ul li.flex1 .images .right {
     clip-path: polygon(0% 152%, 100% -48%, 100% 100%, 0% 100%);
     -webkit-clip-path: polygon(0% 152%, 100% -48%, 100% 100%, 0% 100%);
-    transform: translateY(-100%);
     -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
 }
 
 #container ul li.dock .images .left:hover,
@@ -881,18 +912,18 @@ section#work {
 
 #container ul li.flex2 .images .center,
 #container ul li.diamond .images .center {
-    clip-path: polygon(41% 0%, 59% 0%, 84% 100%, 16% 100%);
     -webkit-clip-path: polygon(41% 0%, 59% 0%, 84% 100%, 16% 100%);
-    transform: translateY(-100%);
+    clip-path: polygon(41% 0%, 59% 0%, 84% 100%, 16% 100%);
     -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
 }
 
 #container ul li.flex2 .images .right,
 #container ul li.diamond .images .right {
-    clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 85% 100%);
     -webkit-clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 85% 100%);
-    transform: translateY(-200%);
+    clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 85% 100%);
     -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
 }
 
 #container ul li.flex2 .images .left:hover,
@@ -994,11 +1025,18 @@ section#work {
     transform: rotate(-14.6deg);
     transform-origin: bottom left;
     z-index: 1;
-    background-image: url(../img/carlos_leona.jpg);
     background-repeat: no-repeat;
     background-size: 72%;
     background-blend-mode: multiply;
     background-position: center 0%;
+}
+
+.no-webp #contact .diagonalBox::after {
+    background-image: url(../img/carlos_leona.jpg);
+}
+
+.webp #contact .diagonalBox::after {
+    background-image: url(../img/carlos_leona.webp);
 }
 
 .contact h2 {
@@ -1015,14 +1053,7 @@ section#work {
 }
 
 .list__contactme>ul>li {
-    display: inline-block;
-    vertical-align: middle;
-    width: 48%;
-    box-sizing: border-box;
-}
-
-.list__contactme>ul>li.right {
-    padding-left: 100px;
+    height: 100%;
 }
 
 .list__contactme>ul>li.right p {
@@ -1031,8 +1062,6 @@ section#work {
 
 .list__contactme>ul>li.right p.line__title {
     height: 50px;
-    /* background-image: url(http://carlosjave.html.xdomain.jp/img/svg/line.svg);
-    background-repeat: no-repeat;*/
     text-indent: -999999px;
 }
 
@@ -1048,7 +1077,7 @@ section#work {
 .list__contactme>ul>li.right p a {
     color: #fff;
     font-size: 25px;
-    font-family: 'Montserrat';
+    font-family: Hiragino Maru Gothic ProN;
     text-decoration: none;
     font-weight: 300;
 }
@@ -1056,7 +1085,6 @@ section#work {
 .list__contactme>ul>li.right p.line__link a small {
     display: inline-block;
     font-size: 18px;
-    font-family: Hiragino Maru Gothic ProN;
 }
 
 .list__contactme>ul>li.right p a:hover {
@@ -1068,7 +1096,6 @@ section#work {
 }
 
 .list__contactme>ul>li.right p.email1 a:hover {
-    /* color: #dd5043; */
     background: -webkit-linear-gradient(45deg, #dd5043, #efefef);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1116,9 +1143,7 @@ footer p::after {
 }
 
 
-/* ----------------------------------------
-* レスポンシブ
-	---------------------------------------- */
+/* ■□■□■□■□■□■□■□■□ MEDIA QUERY ■□■□■□■□■□■□■□■□ */
 
 @media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
     #cjdLogo {
@@ -1130,13 +1155,7 @@ footer p::after {
     }
 }
 
-
-/* phone de 540px hacia abajo */
-
 @media only screen and (max-width: 540px) {}
-
-
-/* 990px hacia abajo */
 
 @media only screen and (max-width: 990px) {
     .for_sp {
@@ -1296,8 +1315,8 @@ footer p::after {
     #container ul li.flex2 .images .right,
     #container ul li.diamond .images .center,
     #container ul li.diamond .images .right {
-        transform: translateY(0);
         -webkit-transform: translateY(0);
+        transform: translateY(0);
     }
     #container ul li>div+div {
         margin-left: 0;
@@ -1366,23 +1385,9 @@ footer p::after {
         background-position: center right 10px;
         opacity: 0.5;
     }
-    .list__contactme>ul>li {
-        display: block;
-        width: 100%;
-        padding: 0
-    }
-    .list__contactme>ul>li.right {
-        padding-left: 0;
-    }
 }
 
-
-/* Extra small devices (phones, 600px hacia abajo) */
-
 @media only screen and (max-width: 600px) {
-    /* .sect02 {
-        background-color: #ff0101;
-    } */
     #container ul li {
         margin: 0 0 50px;
         padding: 20px 0;
@@ -1403,14 +1408,13 @@ footer p::after {
     .list__contactme>ul>li.right p.line__qr {
         right: 10%;
         bottom: 0;
-        text-align: right;
     }
     .list__contactme>ul>li.right p.line__qr img {
         width: 150px;
     }
-    .list__contactme>ul>li.right p {
+    /* .list__contactme>ul>li.right p {
         text-align: right;
-    }
+    } */
     .list__contactme>ul>li.right p a {
         color: #ffffff;
         text-shadow: -1px 2px 4px #33333373;
@@ -1418,7 +1422,15 @@ footer p::after {
         font-weight: 200;
     }
     .list__contactme>ul>li.right p a:hover {
-        color: #1d1d1d;
+        color: #424242;
+    }
+    .list__contactme>ul>li.right p.email1 a:hover {
+        background: #424242;
+        -webkit-background-clip: text;
+    }
+    .list__contactme>ul>li.right p.tel a:hover,
+    .list__contactme>ul>li.right p.line__link a:hover {
+        color: #424242;
     }
     .list__contactme>ul>li.right p.line__link a small {
         display: inline-block;
@@ -1430,21 +1442,15 @@ footer p::after {
     }
 }
 
-
-/* Small devices (minimo 600px hasta 767px) */
-
 @media only screen and (min-width: 600px) and (max-width: 767px) {}
 
-
-/* Medium devices (minimo 768px hasta 990px) */
-
 @media only screen and (min-width: 768px) and (max-device-width: 990px) {
-    /* .sect02 {
-        background-color: #0105ff;
-    } */
+    #container ul li.dental .images {
+        flex-direction: row;
+    }
     #container ul li.dental .images>div,
     #container ul li.auone .images .center {
-        width: 70%;
+        width: 30%;
     }
     #contact .diagonalBox::after {
         top: 37%;
@@ -1453,25 +1459,20 @@ footer p::after {
         background-size: 90%;
         background-position: 20% 0%;
     }
+    .list__contactme>ul>li.right p:not(.line__qr) {
+        text-align: right;
+        padding-right: 20px;
+    }
     .list__contactme>ul>li.right p.line__qr {
         position: relative;
         left: 0;
-    }
-    .list__contactme>ul>li.right p a {
-        color: #2c2c2c;
     }
     .list__contactme>ul>li.right p.line__qr img {
         width: 150px;
     }
 }
 
-
-/* Large devices (minimo 991px hasta 1199px) */
-
 @media only screen and (min-width: 991px) and (max-device-width: 1199px) {
-    /* .sect02 {
-        background-color: #ff0162;
-    } */
     #container ul li {
         margin: 50px auto;
     }
@@ -1481,21 +1482,27 @@ footer p::after {
     #container ul li .summary h3 {
         margin-bottom: 15px;
     }
-    /* #container ul li .summary>div+div {
-        margin-top: 15px;
-    } */
     #container ul li p.link {
         padding: 0 10px;
     }
+    #contact .diagonalBox::after {
+        top: 48%;
+        transform: rotate( 341deg);
+        transform-origin: left;
+        background-size: 82%;
+    }
+    .list__contactme>ul>li {
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+    .list__contactme>ul>li.right p.line__qr {
+        position: relative;
+        left: 0;
+    }
 }
 
-
-/* Extra large devices (minimo 1200px hacia arriba) */
-
 @media only screen and (min-width: 1200px) {
-    /* .sect02 {
-        background-color: #000000;
-    } */
     #container ul li.dental .images,
     #container ul li.auone .images {
         flex-basis: auto;

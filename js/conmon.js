@@ -34,10 +34,8 @@ $(function() {
             videoLeft = left.find("video"),
             videoCenter = center.find("video"),
             videoRight = right.find("video"),
-            //videoHeight = $(".dock").find("video").height(),
             imgHeight = now.find("img").height();
 
-        //now.height(videoHeight);
 
         if (mediaPC.matches) {
             ImageDivHeight();
@@ -94,9 +92,7 @@ $(function() {
             if ($(this).find("video").length > 0) {
                 videoRight[0].pause();
             }
-
         });
-
 
         forLeft.hover(function() {
             left.addClass("activeHover");

@@ -34,6 +34,9 @@
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/conmon.js" as="script">
+    <link rel="preload" href="js/jquery.min.js" as="script">
     <link rel="stylesheet" href="css/basic.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -527,7 +530,6 @@
             </section>
 
             <section id="work" class="sect03">
-                <!-- <div id="particles-js2"></div> -->
                 <h2>my <i>Jobs</i></h2>
                 <div id="container">
                     <ul>
@@ -640,7 +642,6 @@
                                         <source type="image/png" srcset="img/jobs/auone1.png">
                                         <img src="img/jobs/auone1.png" alt="auポータル">
                                     </picture>
-                                    <!-- <img src="img/jobs/auone1.png"> -->
                                 </div>
                             </div>
                             <div class="summary">
@@ -854,7 +855,13 @@
                                 <p class="tel"><a href="tel:09065005705">09065005705</a></p>
                                 <p class="email1"><a href="mailto:javedavalos@gmail.com">javedavalos@gmail.com</a></p>
                                 <p class="line__link"><a href="https://line.me/ti/p/Ujhkb766Ve">line <small>(友達になって)</small> </a></p>
-                                <p class="line__qr"><img src="img/qr.jpg" alt="carlosjavejapan"></p>
+                                <p class="line__qr">
+                                    <picture>
+                                        <source type="image/webp" srcset="img/qr.webp">
+                                        <source type="image/png" srcset="img/qr.png">
+                                        <img src="img/qr.png" alt="line Qr">
+                                    </picture>
+                                </p>
                             </li>
                         </ul>
                     </div>
@@ -877,6 +884,7 @@
     <script src="js/particles.min.js"></script>
     <script src="js/ScrollToPlugin.min.js"></script>
     <script src="js/particlesJsConfig.js"></script>
+    <script src="js/modernizr-custom.js"></script>
     <script src="js/conmon.js" type="text/javascript"></script>
 
 </body>
