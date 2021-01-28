@@ -102,7 +102,7 @@ main {
 
 #J {
     display: block;
-    fill: #aa7f3d;
+    /* fill: #aa7f3d; */
     stroke: #626463;
     stroke-miterlimit: 5;
     animation-delay: .5s, 1.5s, 1.5s;
