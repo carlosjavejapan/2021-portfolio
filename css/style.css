@@ -408,10 +408,26 @@ main {
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
     background-color: #ffffff;
+    -webkit-animation: rotateY 8s infinite linear;
+    animation: rotateY 8s infinite linear;
+}
+
+@-webkit-keyframes rotateY {
+    to {
+        -webkit-transform: rotateY(360deg);
+    }
+}
+
+@keyframes rotateY {
+    to {
+        transform: rotateY(360deg);
+    }
 }
 
 .nav .logo a:hover {
     background-color: #fa7f51;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
 }
 
 .nav.blue {
@@ -730,7 +746,7 @@ section#work {
     margin: 60px auto;
     align-items: center;
     box-sizing: border-box;
-    background-color: #f1f0f0;
+    background-color: #ffffff;
     box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
     border-radius: 10px;
 }
@@ -774,6 +790,12 @@ section#work {
 #container ul li .summary>div {
     padding: 20px 10px;
     border-top: 1px solid #ddd;
+}
+
+#container ul li .summary>p.warning {
+    text-align: right;
+    font-size: 10px;
+    color: rgb(121, 121, 121);
 }
 
 #container ul li .summary div.activeHover,
@@ -937,7 +959,7 @@ section#work {
 
 #contact {
     position: relative;
-    background-color: #e2e2e2;
+    background-color: #ffffff;
 }
 
 #contact .diagonalBox {
@@ -1291,18 +1313,18 @@ footer p::after {
     #container ul li p {
         padding: 0;
     }
-    #container ul li.dental,
-    #container ul li.diamond,
-    #container ul li.flex2 {
-        flex-direction: column-reverse;
-    }
-    #container ul li.dental .images {
+    #container ul li .images {
         flex-direction: column;
     }
+    #container ul li.dock,
+    #container ul li.oneone,
+    #container ul li.flex1,
+    #container ul li.li_01 {
+        flex-direction: column-reverse;
+    }
     #container ul li.dental .images>div,
-    #container ul li.auone .images .center,
-    #container ul li.flex2 .images>div {
-        width: 95%;
+    #container ul li.auone .images .center {
+        width: 80%;
         margin: 20px auto;
     }
     #container ul li.diamond .images>div,
