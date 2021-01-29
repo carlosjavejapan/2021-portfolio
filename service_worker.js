@@ -10,19 +10,19 @@ const FILES_TO_CACHE = [
     '/css/style.css',
 
     '/js/conmon.js',
-    '/js/gsap.min.js',
-    '/js/jquery.min.js',
-    '/js/modernizr-custom.js',
-    '/js/particles.min.js',
-    '/js/particlesJsConfig.js',
-    '/js/ScrollToPlugin.min.js',
-    '/js/ScrollTrigger.min.js',
+    // '/js/gsap.min.js',
+    // '/js/jquery.min.js',
+    // '/js/modernizr-custom.js',
+    // '/js/particles.min.js',
+    // '/js/particlesJsConfig.js',
+    // '/js/ScrollToPlugin.min.js',
+    // '/js/ScrollTrigger.min.js',
 
-    '/img/jobs/dental_1.mp4',
-    '/img/jobs/dental_2.mp4',
-    '/img/jobs/dental_3.mp4',
-    '/img/jobs/dock_1.mp4',
-    '/img/jobs/dock_2.mp4',
+    // '/img/jobs/dental_1.mp4',
+    // '/img/jobs/dental_2.mp4',
+    // '/img/jobs/dental_3.mp4',
+    // '/img/jobs/dock_1.mp4',
+    // '/img/jobs/dock_2.mp4',
 ];
 
 self.addEventListener('install', (evt) => {
