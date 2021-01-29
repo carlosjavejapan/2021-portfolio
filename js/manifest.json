@@ -6,5 +6,17 @@
     "display": "browser",
     "orientation": "portrait",
     "scope": "/",
-    "start_url": "/https://carlosjavejapan.github.io/2021-portfolio/"
+    "start_url": "/",
+    "icons": [{
+            "src": "/img/full_logo.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/img/full_logo.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "splash_pages": null
 }
