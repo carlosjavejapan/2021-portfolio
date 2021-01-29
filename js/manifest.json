@@ -1,0 +1,10 @@
+{
+    "name": "My Portfolio Carlos Jave",
+    "short_name": "Carlos Jave",
+    "theme_color": "#f88440",
+    "background_color": "#1a252f",
+    "display": "browser",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/https://carlosjavejapan.github.io/2021-portfolio/"
+}
