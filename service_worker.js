@@ -5,11 +5,11 @@ const CACHE_NAME = 'static-cache-v9';
 
 // CODELAB: Add list of files to cache here.
 const FILES_TO_CACHE = [
-    '/index.html',
+    './index.html',
 
-    '/css/style.css',
+    './css/style.css',
 
-    '/js/conmon.js',
+    './js/conmon.js',
     // '/js/gsap.min.js',
     // '/js/jquery.min.js',
     // '/js/modernizr-custom.js',
