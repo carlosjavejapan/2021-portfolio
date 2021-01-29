@@ -131,23 +131,16 @@ $(function() {
             if (right.find("video").length > 0) {
                 videoRight[0].pause();
             }
-
         });
 
     });
 });
 
 // ■■■■■■■■ tomar el tamano de window para cada section
-
-// tomar el tamano de window para cada section
 function setHeight() {
     windowHeight = $(window).innerHeight();
     $('.sect01').css('min-height', windowHeight);
     $('#particle-canvas').css('min-height', windowHeight);
-    // $('.sect02').css('min-height', windowHeight);
-    // $('.sect03').css('min-height', windowHeight);
-    // $('.sect04').css('min-height', windowHeight);
-    // $('.sect05').css('min-height', windowHeight + 1);
 };
 setHeight();
 $(window).resize(function() {
@@ -264,7 +257,6 @@ $(function() {
 // ■■■■■■■■function animateFrom(elem, direction) {
 function animateFrom(elem, direction) {
     direction = direction | 1;
-
     var x = 0,
         y = direction * 100;
     if (elem.classList.contains("gs_reveal_fromLeft")) {
@@ -289,24 +281,18 @@ function animateFrom(elem, direction) {
 }
 
 function hide(elem) {
-    gsap.set(elem, {
-        autoAlpha: 0
-    });
+    gsap.set(elem, { autoAlpha: 0 });
 }
 
 function show(elem) {
-    gsap.set(elem, {
-        autoAlpha: 1
-    });
+    gsap.set(elem, { autoAlpha: 1 });
 }
 
 // Gsap animation
 document.addEventListener("DOMContentLoaded", function() {
     gsap.registerPlugin(ScrollTrigger);
-
     gsap.utils.toArray(".gs_reveal").forEach(function(elem) {
         hide(elem); // assure that the element is hidden when scrolled into view
-
         ScrollTrigger.create({
             trigger: elem,
             toggleActions: "play reset reset reset",
@@ -322,8 +308,3 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
-
-window.onload = function() {
-    var element = document.getElementsByTagName('video');
-    element.muted = "muted";
-}
