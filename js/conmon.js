@@ -241,8 +241,8 @@ $(function() {
 
     if (mediaPC.matches && !(scrollDistance >= 400)) {
         gsap.from(".nav_list li", {
-            duration: 1,
-            delay: 1.5,
+            duration: .5,
+            delay: .5,
             opacity: 0,
             x: () => Math.random() * 400 - 200,
             y: () => Math.random() * 400 - 200,
