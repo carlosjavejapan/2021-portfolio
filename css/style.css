@@ -985,6 +985,69 @@ section#work {
     vertical-align: top;
 }
 
+.resume {
+    background-color: #fff;
+    padding: 100px 0;
+}
+
+.resume .home_cli {
+    width: 50%;
+    margin: auto;
+    background: #040d21;
+    border-radius: .625rem;
+    font-size: .75rem;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .0274351), 0 4px 4px rgba(0, 0, 0, .0400741), 0 10px 8px rgba(0, 0, 0, .0499982), 0 15px 15px rgba(0, 0, 0, .0596004), 0 30px 30px rgba(0, 0, 0, .0709366), 0 70px 65px rgba(0, 0, 0, .09) !important;
+}
+
+.resume .home_cli_title {
+    position: relative;
+    font-size: .6875rem;
+    color: rgba(255, 255, 255, .75);
+    padding: .25rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.resume .home_cli_title span {
+    position: absolute;
+    left: 8px;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.resume ul {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.resume .home_cli ul li {
+    color: #fff;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace !important;
+}
+
+.resume .home_cli ul li+li {
+    margin-top: 25px;
+}
+
+.resume .home_cli ul li .white_fade {
+    color: rgba(255, 255, 255, .7);
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.resume .home_cli ul li .color_pink {
+    color: #ea4aaa;
+}
+
+.resume .home_cli ul li .color_green {
+    color: #28ad2c;
+}
+
+.resume .home_cli ul li .color_blue {
+    color: #42c9d8;
+}
+
 
 /* conatct */
 
@@ -1363,6 +1426,9 @@ footer p::after {
         width: auto;
         margin: 0 auto;
         padding: 10px;
+    }
+    .resume .home_cli {
+        width: 90%;
     }
     .contact h2 {
         font-size: 16px;
