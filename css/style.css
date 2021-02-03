@@ -1132,27 +1132,30 @@ section#work {
 #contact .list__contactme {
     position: relative;
     z-index: 3;
+    text-align: center;
 }
 
 #contact .diagonalBox::after {
-    background: #1a252f7a;
+    background: #1a252f;
     top: 53%;
     transform: rotate(-14.6deg);
     transform-origin: bottom left;
     z-index: 1;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
     background-size: 72%;
     background-blend-mode: multiply;
-    background-position: center 0%;
+    background-position: center 0%; */
 }
 
-.no-webp #contact .diagonalBox::after {
+
+/* .no-webp #contact .diagonalBox::after {
     background-image: url(../img/carlos_leona.jpg);
-}
+} */
 
-.webp #contact .diagonalBox::after {
+
+/* .webp #contact .diagonalBox::after {
     background-image: url(../img/carlos_leona.webp);
-}
+} */
 
 .contact h2 {
     text-align: center;
@@ -1163,30 +1166,43 @@ section#work {
 
 .list__contactme>ul {
     padding: 100px 0;
-    height: 60vh;
-    text-align: center;
+    display: inline-block;
 }
 
 .list__contactme>ul>li {
-    height: 100%;
+    width: calc( (100vh / 2));
+    height: calc( (100vh / 2));
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #0000005e;
+    border-radius: 50%;
+    background-position-x: 30%;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.no-webp .list__contactme>ul>li {
+    background-image: url(../img/carlos_leona.webp);
+}
+
+.webp .list__contactme>ul>li {
+    background-image: url(../img/carlos_leona.webp);
 }
 
 .list__contactme>ul>li.right p {
-    margin-bottom: 40px;
-}
-
-.list__contactme>ul>li.right p.line__title {
-    height: 50px;
-    text-indent: -999999px;
+    margin-bottom: 20px;
 }
 
 .list__contactme>ul>li.right p.line__qr {
     position: absolute;
-    left: 10%;
+    left: 20%;
 }
 
 .list__contactme>ul>li.right p.line__qr img {
-    width: 200px;
+    width: 150px;
 }
 
 .list__contactme>ul>li.right p a {
@@ -1195,6 +1211,7 @@ section#work {
     font-family: Hiragino Maru Gothic ProN;
     text-decoration: none;
     font-weight: 300;
+    text-shadow: -1px 2px 2px #000;
 }
 
 .list__contactme>ul>li.right p.line__link a small {
@@ -1202,15 +1219,17 @@ section#work {
     font-size: 18px;
 }
 
-.list__contactme>ul>li.right p a:hover {
-    text-decoration: underline;
-}
 
-.list__contactme>ul>li.right p.tel a:hover {
+/* .list__contactme>ul>li.right p a:hover {
+    text-decoration: underline;
+} */
+
+.list__contactme>ul>li.right p a:hover {
     color: #fa7f51;
 }
 
-.list__contactme>ul>li.right p.email1 a:hover {
+
+/* .list__contactme>ul>li.right p.email1 a:hover {
     background: -webkit-linear-gradient(45deg, #dd5043, #efefef);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1219,7 +1238,7 @@ section#work {
 
 .list__contactme>ul>li.right p.line__link a:hover {
     color: #1dcd00;
-}
+} */
 
 ::-webkit-search-cancel-button {
     display: none;
@@ -1494,21 +1513,13 @@ footer p::after {
         margin: 30px 0;
     }
     .list__contactme>ul {
+        display: block;
         padding: 20px 5px;
         position: relative;
     }
-    .list__contactme>ul>li.left {
-        position: absolute;
-        display: block;
-        top: -20px;
-        right: 0;
-        width: 50%;
-    }
-    .list__contactme>ul>li.left p.meSVG {
-        height: 90px;
-        background-size: auto;
-        background-position: center right 10px;
-        opacity: 0.5;
+    .list__contactme>ul>li {
+        width: calc( (85vh / 2));
+        height: calc( (85vh / 2));
     }
 }
 
@@ -1531,8 +1542,10 @@ footer p::after {
         background-position: 42% 0%;
     }
     .list__contactme>ul>li.right p.line__qr {
-        right: 10%;
-        bottom: 0;
+        width: 100%;
+        bottom: 60px;
+        left: 0;
+        right: calc( (100vh/ 2));
     }
     .list__contactme>ul>li.right p.line__qr img {
         width: 150px;
@@ -1616,11 +1629,11 @@ footer p::after {
         transform-origin: left;
         background-size: 82%;
     }
-    .list__contactme>ul>li {
+    /* .list__contactme>ul>li {
         display: block;
         width: 100%;
         padding: 0;
-    }
+    } */
     .list__contactme>ul>li.right p.line__qr {
         position: relative;
         left: 0;
