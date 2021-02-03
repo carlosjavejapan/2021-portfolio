@@ -189,7 +189,7 @@ $(function() {
             let newScrollDistance = $window.scrollTop()
             if (newScrollDistance >= 400) {
                 nav.addClass('horizontal__nav');
-                navLogo.css('display', 'block');
+                navLogo.css('display', 'inline-block');
             } else {
                 nav.removeClass('horizontal__nav');
                 navLogo.css('display', 'none');

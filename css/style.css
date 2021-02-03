@@ -37,8 +37,8 @@ main {
 /* transiciones iguales */
 
 .nav,
-.nav ul,
-.nav ul li a,
+.nav>ul,
+.nav>ul li a,
 .nav .logo a,
 #nav-icon1,
 #nav-icon1 span,
@@ -48,7 +48,8 @@ main {
 #container ul li .images>div,
 #container ul li .images div img,
 #container ul li p a,
-.list__contactme>ul>li.right p a {
+.list__contactme>ul>li.right p a,
+.linkProfile ul li a {
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
@@ -60,6 +61,57 @@ main {
     -moz-transition: all 0.5s ease-out;
     -o-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
+}
+
+
+/* link external profil */
+
+.linkProfile {
+    display: block;
+    box-sizing: border-box;
+}
+
+.linkProfile ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linkProfile ul li {
+    margin: 0 10px;
+}
+
+.linkProfile ul li a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    text-indent: -99999px;
+}
+
+.linkProfile ul li.item1 a {
+    -webkit-mask: url(..//img/svg/githubIcon.svg);
+    mask: url(..//img/svg/githubIcon.svg);
+}
+
+.linkProfile ul li.item2 a {
+    -webkit-mask: url(..//img/svg/linkedin.svg);
+    mask: url(..//img/svg/linkedin.svg);
+}
+
+.linkProfile ul li a:hover {
+    background-color: #999999;
+}
+
+.nav .linkProfile {
+    width: 100%;
+    padding: 18px;
+    vertical-align: top;
+}
+
+.nav.horizontal__nav .linkProfile {
+    display: inline-block;
+    width: auto;
 }
 
 
@@ -480,7 +532,7 @@ main {
     background: #dd4132;
 }
 
-.nav ul {
+.nav>ul {
     display: -webkit-flex;
     display: flex;
     -webkit-justify-content: space-between;
@@ -500,18 +552,18 @@ main {
     flex-direction: row;
 }
 
-.nav ul li a {
+.nav>ul li a {
     position: relative;
     font-family: 'Montserrat', sans-serif;
     color: #fff;
     text-decoration: none;
 }
 
-.nav ul li a:hover {
+.nav>ul li a:hover {
     background-color: transparent;
 }
 
-.nav ul li a:after {
+.nav>ul li a:after {
     content: '';
     background-color: transparent;
     width: 30px;
@@ -524,7 +576,7 @@ main {
     transition: .8s all ease-out;
 }
 
-.nav ul li a:hover:after {
+.nav>ul li a:hover:after {
     background-color: #fff;
     position: absolute;
     width: 100%;
@@ -534,7 +586,7 @@ main {
     transition: .3s all ease-out;
 }
 
-.nav ul li.active a:after {
+.nav>ul li.active a:after {
     background-color: #fff;
     position: absolute;
     width: 100%;
@@ -1185,6 +1237,10 @@ footer {
     border-top: 1px solid #fa7f51;
 }
 
+footer .linkProfile {
+    width: 100%;
+}
+
 footer p::before {
     background-color: transparent;
     content: '';
@@ -1227,6 +1283,10 @@ footer p::after {
     .for_pc {
         display: none !important;
     }
+    .nav.spNav .linkProfile {
+        position: relative;
+        top: 75px;
+    }
     .sect02,
     .sect03,
     .sect04,
@@ -1265,7 +1325,7 @@ footer p::after {
         right: 0px;
     }
     .animate_for_menuIcon {
-        right: 44%;
+        right: calc( (100% / 2) - 22px);
     }
     .animate_for_menuIcon2 {
         right: 20px;
@@ -1279,12 +1339,11 @@ footer p::after {
         max-width: 100%;
         height: auto;
         position: relative;
-        top: 100px;
+        top: calc( (100vh / 2) - 220px);
         text-align: center;
     }
     ul.nav_list li {
-        margin: 10px 0;
-        padding: 5px 0;
+        padding: 7% 0;
     }
     ul.nav_list li a {
         font-size: 20px;
