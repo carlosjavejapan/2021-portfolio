@@ -175,7 +175,6 @@ $(function() {
     menuIcon.on('click', function(e) {
         e.preventDefault();
         nav.toggleClass('animate_for_nav');
-        nav.nextAll().toggleClass('bur');
         $(this).toggleClass('animate_for_menuIcon');
         $(this).find('#nav-icon1').toggleClass('open');
     });
@@ -202,20 +201,24 @@ $(function() {
     window.addEventListener("resize", navOpen);
 
     // Smoth scroll
-    navItem.on('click', function(e) {
-        e.preventDefault();
-        let $this = $(this),
-            href = $this.attr("href"),
-            topY = $(href).offset().top + 1;
-        TweenMax.to($window, 1, {
-            scrollTo: {
-                y: topY,
-                autoKill: true
-            },
-            ease: Power3.easeOut
-        });
-        return false;
-    });
+    // navItem.on('click', function(e) {
+    //     e.preventDefault();
+    //     let $this = $(this),
+    //         href = $this.attr("href"),
+    //         topY = $(href).offset().top + 1;
+    //     TweenMax.to($window, 1, {
+    //         scrollTo: {
+    //             y: topY,
+    //             autoKill: true
+    //         },
+    //         ease: Power3.easeOut
+    //     }, 300, function() {
+    //             $('.nav').removeClass('animate_for_nav');
+    //             $('.openMenu').removeClass('animate_for_menuIcon');
+    //             $('#nav-icon1').removeClass('open');
+    //         });
+    //     return false;
+    // });
 
     navItem.on('click', function(e) {
         e.preventDefault();
@@ -223,7 +226,11 @@ $(function() {
             offsetTop = href === "#" ? 0 : $(href).offset().top + 1;
         $('html, body').stop().animate({
             scrollTop: offsetTop
-        }, 800);
+        }, 400, function() {
+                $('.nav').removeClass('animate_for_nav');
+                menuIcon.removeClass('animate_for_menuIcon');
+                $('#nav-icon1').removeClass('open');
+            });
     });
 
 
