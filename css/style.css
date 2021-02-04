@@ -114,6 +114,11 @@ main {
     width: auto;
 }
 
+.sect01 h1>span {
+    display: inline-block;
+    text-indent: -9999px;
+}
+
 
 /* animation for svg */
 
