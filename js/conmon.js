@@ -10,7 +10,7 @@ let age = calculateAge("23/10/1982"),
     daughter = calculateAge("16/04/2015"),
     stay = calculateAge("09/06/2001");
 document.getElementById("age").innerHTML = age;
-document.getElementById("daughter").innerHTML = daughter;
+// document.getElementById("daughter").innerHTML = daughter;
 document.getElementById("stay").innerHTML = stay;
 
 
