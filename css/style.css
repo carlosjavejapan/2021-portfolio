@@ -74,6 +74,8 @@ main {
 
 .linkProfile ul {
     display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     align-items: center;
     justify-content: center;
 }
@@ -91,13 +93,40 @@ main {
 }
 
 .linkProfile ul li.item1 a {
-    -webkit-mask: url(..//img/svg/githubIcon.svg);
+    -webkit-mask: url(../img/svg/githubIcon.svg);
     mask: url(..//img/svg/githubIcon.svg);
 }
 
 .linkProfile ul li.item2 a {
-    -webkit-mask: url(..//img/svg/linkedin.svg);
-    mask: url(..//img/svg/linkedin.svg);
+    -webkit-mask: url(../img/svg/linkedin.svg);
+    mask: url(../img/svg/linkedin.svg);
+}
+
+.linkProfile ul li.item3 {
+    width: 100%;
+}
+
+.linkProfile ul li.item3 a {
+    padding: 3px 6px;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    text-indent: inherit;
+    text-decoration: none;
+    color: #fff;
+    color: #666666;
+    background-color: #fff;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.linkProfile ul li.item3 a span {
+    display: inline-block;
+    margin-bottom: 7px;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #dd4132;
 }
 
 .linkProfile ul li a:hover {
@@ -553,6 +582,7 @@ main {
 }
 
 .nav.horizontal__nav ul {
+    flex-wrap: nowrap;
     max-width: 500px;
     right: 2%;
     flex-direction: row;
